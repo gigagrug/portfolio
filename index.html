@@ -24,26 +24,33 @@
       {
         name: "Portfolio",
         technology: "Html, CSS (Tailwindcss), Javascript",
-        description: "It's this  website",
+        description: "It's this  website.",
         github: "https://github.com/develang/Portfolio",
         website: "https://develang.github.io/Portfolio/"
+      },
+      {
+        name: "Todo",
+        technology: "Html, CSS (Tailwindcss), Javascript, Htmx, Golang, Docker, Azure (App Service)",
+        description: "A Golang todo app deployed to Azure App Service.",
+        github: "https://github.com/develang/Todo",
+        website: "https://todo-go.azurewebsites.net/"
       }
     ]
     const projectContainer = document.querySelector("#project-container")
     projects.forEach((project) => {
       const projectElement = `
-        <div class="w-lg p-6 bg-white border border-gray-200 rounded-lg dark:bg-[#101418] dark:border-gray-700">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">${project.name}</h5>
-          <p class="mb-2 text-gray-700 dark:text-gray-400">Technology: ${project.technology}</p>
-          <p class="mb-2  text-gray-700 dark:text-gray-400">Description: ${project.description}</p>
-          <p class="mb-2  text-gray-700 dark:text-gray-400">
-            Github: <a href="${project.github}" target="_blank" class="mb-2 text-blue-700 dark:text-blue-400 hover:underline">${project.github}</a>
-          </p>
-          <p class="mb-2  text-gray-700 dark:text-gray-400">
-            Website: <a href="${project.website}" target="_blank" class="mb-2 text-blue-700 dark:text-blue-400 hover:underline">${project.website}</a>
-          </p>
-        </div>
-      `
+         <div class="w-lg p-6 bg-white border border-gray-200 rounded-lg dark:bg-[#101418] dark:border-gray-700">
+           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-300">${project.name}</h5>
+           <p class="mb-2 text-gray-700 dark:text-gray-400">Technology: ${project.technology}</p>
+           <p class="mb-2  text-gray-700 dark:text-gray-400">Description: ${project.description}</p>
+           <p class="mb-2  text-gray-700 dark:text-gray-400">
+             Github: <a href="${project.github}" target="_blank" class="mb-2 text-blue-700 dark:text-blue-400 hover:underline">${project.github}</a>
+           </p>
+           <p class="mb-2  text-gray-700 dark:text-gray-400">
+             Website: <a href="${project.website}" target="_blank" class="mb-2 text-blue-700 dark:text-blue-400 hover:underline">${project.website}</a>
+           </p>
+         </div>
+       `
       projectContainer.innerHTML += projectElement
     })
   </script>
